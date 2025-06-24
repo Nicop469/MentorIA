@@ -54,7 +54,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
           className="w-full bg-primary-600 text-white py-2 rounded-md hover:bg-primary-700 transition-colors flex items-center justify-center"
         >
           <span>
-            {isFrameworkCourse ? 'Select Chapter' : 'Select Course'}
+            {isFrameworkCourse ? 'Seleccionar cap\u00edtulo' : 'Seleccionar curso'}
           </span>
         </button>
       </div>

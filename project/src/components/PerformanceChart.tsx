@@ -33,7 +33,7 @@ interface PerformanceChartProps {
 const PerformanceChart: React.FC<PerformanceChartProps> = ({ 
   attempts, 
   type = 'line',
-  title = 'Performance Over Time'
+  title = 'Rendimiento a lo largo del tiempo'
 }) => {
   const labels = attempts.map((_, index) => `Q${index + 1}`);
   
@@ -41,7 +41,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
     labels,
     datasets: [
       {
-        label: 'Difficulty Level',
+        label: 'Nivel de dificultad',
         data: attempts.map(attempt => attempt.difficulty),
         borderColor: 'rgb(79, 70, 229)',
         backgroundColor: 'rgba(79, 70, 229, 0.5)',
@@ -53,7 +53,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
     labels,
     datasets: [
       {
-        label: 'Time Taken (seconds)',
+        label: 'Tiempo empleado (segundos)',
         data: attempts.map(attempt => attempt.timeTaken),
         borderColor: 'rgb(14, 165, 233)',
         backgroundColor: 'rgba(14, 165, 233, 0.5)',
@@ -65,7 +65,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
     labels,
     datasets: [
       {
-        label: 'Correct Answers',
+        label: 'Respuestas correctas',
         data: attempts.map(attempt => attempt.correct ? 1 : 0),
         backgroundColor: attempts.map(attempt => 
           attempt.correct ? 'rgba(34, 197, 94, 0.7)' : 'rgba(239, 68, 68, 0.7)'
@@ -113,11 +113,11 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
   return (
     <div className="space-y-8">
       <div className="bg-white p-4 rounded-lg shadow">
-        {renderChart(difficultyData, 'Difficulty Progression')}
+        {renderChart(difficultyData, 'Progresi\u00f3n de dificultad')}
       </div>
       
       <div className="bg-white p-4 rounded-lg shadow">
-        {renderChart(timeData, 'Time Taken Per Question')}
+        {renderChart(timeData, 'Tiempo por pregunta')}
       </div>
       
       <div className="bg-white p-4 rounded-lg shadow">
@@ -128,7 +128,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
               ...options.plugins,
               title: {
                 ...options.plugins.title,
-                text: 'Question Results',
+                text: 'Resultados de las preguntas',
               },
             },
             scales: {
@@ -137,7 +137,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
                 max: 1,
                 ticks: {
                   callback: function(value: any) {
-                    return value === 0 ? 'Incorrect' : value === 1 ? 'Correct' : '';
+                    return value === 0 ? 'Incorrecta' : value === 1 ? 'Correcta' : '';
                   }
                 }
               }

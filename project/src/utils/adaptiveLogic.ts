@@ -125,20 +125,20 @@ export const calculateMetrics = (attempts: QuestionAttempt[]): {
 // Generate feedback based on answer
 export const generateFeedback = (isCorrect: boolean, timeTaken: number, targetTime: number): string => {
   if (!isCorrect) {
-    return "Incorrect. Check your work and try again next time.";
+    return 'Incorrecto. Revisa tu trabajo e intenta de nuevo.';
   }
   
   if (timeTaken < targetTime * 0.5) {
-    return "Excellent! You solved this very quickly.";
+    return '¡Excelente! Resolviste esto muy r\u00e1pido.';
   }
   
   if (timeTaken < targetTime * 0.8) {
-    return "Great job! You solved this efficiently.";
+    return '\u00a1Buen trabajo! Resolviste esto eficientemente.';
   }
   
   if (timeTaken < targetTime * 1.1) {
-    return "Good work! You completed this within the expected time.";
+    return 'Bien hecho. Completaste esto dentro del tiempo esperado.';
   }
   
-  return "Correct! You might want to practice similar problems to improve your speed.";
+  return 'Correcto. Podr\u00edas practicar problemas similares para mejorar tu velocidad.';
 };

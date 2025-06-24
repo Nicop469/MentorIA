@@ -52,11 +52,11 @@ const WelcomePage: React.FC = () => {
           className="text-center"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Welcome to <span className="text-primary-600">EduProfile AI</span>
+            Bienvenido a <span className="text-primary-600">EduProfile AI</span>
           </h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Personalized learning platform that adapts math content to your level and performance.
+            Plataforma de aprendizaje personalizada que adapta el contenido de matem\u00e1ticas a tu nivel y rendimiento.
           </p>
           
           {showNameInput ? (
@@ -67,7 +67,7 @@ const WelcomePage: React.FC = () => {
               className="max-w-md mx-auto mb-8"
             >
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 text-left mb-1">
-                Your Name
+                Tu nombre
               </label>
               <input
                 type="text"
@@ -75,7 +75,7 @@ const WelcomePage: React.FC = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 mb-4"
-                placeholder="Enter your name"
+                placeholder="Ingresa tu nombre"
                 autoFocus
               />
               <div className="flex space-x-4">
@@ -88,7 +88,7 @@ const WelcomePage: React.FC = () => {
                       : 'bg-gray-400 cursor-not-allowed'
                   }`}
                 >
-                  Start Learning
+                  Comenzar a aprender
                 </button>
                 <button
                   onClick={handleTeacherLogin}
@@ -99,7 +99,7 @@ const WelcomePage: React.FC = () => {
                       : 'border-gray-400 text-gray-400 cursor-not-allowed'
                   }`}
                 >
-                  I'm a Teacher
+                  Soy profesor
                 </button>
               </div>
             </motion.div>
@@ -121,7 +121,7 @@ const WelcomePage: React.FC = () => {
                 className="border border-primary-600 text-primary-600 text-lg font-medium py-3 px-8 rounded-md hover:bg-primary-50 transition-colors flex items-center"
               >
                 <GraduationCap size={20} className="mr-2" />
-                Teacher Portal
+                Portal docente
               </motion.button>
             </div>
           )}
@@ -139,9 +139,9 @@ const WelcomePage: React.FC = () => {
                 <Brain className="w-6 h-6 text-primary-600" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Personalized Learning</h3>
+            <h3 className="text-xl font-semibold text-center mb-2">Aprendizaje personalizado</h3>
             <p className="text-gray-600 text-center">
-              Our system adapts to your skill level, giving you the perfect challenge every time.
+              Nuestro sistema se adapta a tu nivel de habilidad y te brinda el desaf\u00edo perfecto cada vez.
             </p>
           </motion.div>
           
@@ -156,9 +156,9 @@ const WelcomePage: React.FC = () => {
                 <TrendingUp className="w-6 h-6 text-primary-600" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Track Your Progress</h3>
+            <h3 className="text-xl font-semibold text-center mb-2">Sigue tu progreso</h3>
             <p className="text-gray-600 text-center">
-              See your improvements over time with detailed performance analytics.
+              Observa tus mejoras con el tiempo mediante an\u00e1lisis detallados de rendimiento.
             </p>
           </motion.div>
           
@@ -173,9 +173,9 @@ const WelcomePage: React.FC = () => {
                 <Lightbulb className="w-6 h-6 text-primary-600" />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-center mb-2">Smart Recommendations</h3>
+            <h3 className="text-xl font-semibold text-center mb-2">Recomendaciones inteligentes</h3>
             <p className="text-gray-600 text-center">
-              Get content suggestions based on your performance and learning patterns.
+              Obt\u00e9n sugerencias de contenido seg\u00fan tu rendimiento y patrones de aprendizaje.
             </p>
           </motion.div>
         </div>
