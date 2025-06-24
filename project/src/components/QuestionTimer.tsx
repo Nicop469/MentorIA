@@ -48,8 +48,8 @@ const QuestionTimer: React.FC<QuestionTimerProps> = ({ targetTime, onTimeUp, isA
   return (
     <div className="w-full mb-6">
       <div className="flex justify-between text-sm text-gray-600 mb-1">
-        <span>Time remaining: {timeLeft}s</span>
-        <span>Target: {targetTime}s</span>
+        <span>Tiempo restante: {timeLeft}s</span>
+        <span>Objetivo: {targetTime}s</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div 

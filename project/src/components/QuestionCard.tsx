@@ -67,7 +67,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       const seconds = question.targetTime;
       setTimeTaken(seconds);
       setIsSubmitted(true);
-      setFeedback("Time's up! Let's move on to the next question.");
+      setFeedback('Se acab\u00f3 el tiempo. Pasemos a la siguiente pregunta.');
       
       onAnswer({
         questionId: question.id,
@@ -87,14 +87,14 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     >
       {questionNumber && totalQuestions && (
         <div className="text-sm text-gray-500 mb-2">
-          Question {questionNumber} of {totalQuestions}
+          Pregunta {questionNumber} de {totalQuestions}
         </div>
       )}
       
       <div className="mb-4">
         <div className="flex justify-between items-center">
           <span className="bg-primary-100 text-primary-700 text-xs font-semibold px-2 py-1 rounded">
-            Difficulty: {question.difficulty}/10
+            Dificultad: {question.difficulty}/10
           </span>
         </div>
       </div>
@@ -109,7 +109,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       
       <div className="mb-6">
         <label htmlFor="answer" className="block text-sm font-medium text-gray-700 mb-2">
-          Your Answer
+          Tu respuesta
         </label>
         <input
           id="answer"
@@ -120,7 +120,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
           onChange={(e) => setAnswer(e.target.value)}
           onKeyPress={handleKeyPress}
           disabled={isSubmitted}
-          placeholder="Type your answer here..."
+          placeholder="Escribe tu respuesta aqu\u00ed..."
         />
       </div>
       
@@ -134,7 +134,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
               : 'bg-primary-600 text-white hover:bg-primary-700 transition-colors'
           }`}
         >
-          Submit Answer
+          Enviar respuesta
         </button>
       </div>
       
@@ -151,10 +151,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         >
           <p className="font-medium">{feedback}</p>
           <p className="text-sm mt-1">
-            Time taken: {timeTaken} seconds (Target: {question.targetTime} seconds)
+            Tiempo empleado: {timeTaken} segundos (Objetivo: {question.targetTime} segundos)
           </p>
           <p className="text-sm mt-1">
-            Correct answer: {question.correctAnswer}
+            Respuesta correcta: {question.correctAnswer}
           </p>
         </motion.div>
       )}

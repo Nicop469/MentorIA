@@ -64,9 +64,9 @@ const ResultsPage: React.FC = () => {
           transition={{ duration: 0.3 }}
           className="mb-8"
         >
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Your Diagnostic Results</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Resultados del diagn\u00f3stico</h1>
           <p className="text-gray-600">
-            Here's a summary of your performance in the diagnostic assessment.
+            Aqu\u00ed tienes un resumen de tu desempe\u00f1o en la evaluaci\u00f3n diagn\u00f3stica.
           </p>
         </motion.div>
         
@@ -81,7 +81,7 @@ const ResultsPage: React.FC = () => {
               <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
                 <Award size={20} />
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-800">Skill Level</h3>
+              <h3 className="ml-3 text-lg font-semibold text-gray-800">Nivel de habilidad</h3>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">
               {result.skillLevel}/10
@@ -101,17 +101,17 @@ const ResultsPage: React.FC = () => {
               <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
                 <CheckCircle size={20} />
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-800">Accuracy</h3>
+              <h3 className="ml-3 text-lg font-semibold text-gray-800">Precisi\u00f3n</h3>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">
               {result.correctPercentage}%
             </div>
             <p className="text-gray-600">
-              {result.correctPercentage >= 80 
-                ? 'Excellent understanding' 
-                : result.correctPercentage >= 60 
-                ? 'Good grasp of concepts' 
-                : 'Room for improvement'}
+              {result.correctPercentage >= 80
+                ? 'Comprensi\u00f3n excelente'
+                : result.correctPercentage >= 60
+                ? 'Buen dominio de los conceptos'
+                : 'Espacio para mejorar'}
             </p>
           </motion.div>
           
@@ -125,36 +125,36 @@ const ResultsPage: React.FC = () => {
               <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
                 <Clock size={20} />
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-800">Average Time</h3>
+              <h3 className="ml-3 text-lg font-semibold text-gray-800">Tiempo promedio</h3>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">
               {result.averageTime}s
             </div>
             <p className="text-gray-600">
-              {result.averageTime <= 30 
-                ? 'Quick response time' 
-                : result.averageTime <= 60 
-                ? 'Average response time' 
-                : 'Taking a bit longer than average'}
+              {result.averageTime <= 30
+                ? 'Respuesta muy r\u00e1pida'
+                : result.averageTime <= 60
+                ? 'Tiempo de respuesta promedio'
+                : 'Un poco m\u00e1s lento de lo promedio'}
             </p>
           </motion.div>
         </div>
         
         <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Performance Analysis</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">An\u00e1lisis de rendimiento</h3>
           <PerformanceChart attempts={result.attempts} />
         </div>
         
         <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Recommendation</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">Recomendaci\u00f3n</h3>
           <p className="text-gray-700 mb-4">
-            Based on your diagnostic assessment, we recommend starting with level {result.skillLevel} content and advancing gradually. 
-            You showed {result.correctPercentage >= 70 ? 'strong' : 'adequate'} understanding of the concepts, 
-            with an average response time of {result.averageTime} seconds.
+            Seg\u00fan tu diagn\u00f3stico, te recomendamos comenzar con contenido de nivel {result.skillLevel} y avanzar gradualmente.
+            Mostraste {result.correctPercentage >= 70 ? 'un dominio fuerte' : 'un dominio adecuado'} de los conceptos,
+            con un tiempo de respuesta promedio de {result.averageTime} segundos.
           </p>
           
           <p className="text-gray-700 mb-6">
-            Continue to Practice Mode to further improve your skills and track your progress over time.
+            Contin\u00faa al modo de pr\u00e1ctica para mejorar tus habilidades y seguir tu progreso con el tiempo.
           </p>
           
           <motion.button
@@ -163,7 +163,7 @@ const ResultsPage: React.FC = () => {
             onClick={handleContinueToPractice}
             className="inline-flex items-center bg-primary-600 text-white font-medium py-3 px-6 rounded-md hover:bg-primary-700 transition-colors"
           >
-            Continue to Practice Mode
+            Continuar al modo de pr\u00e1ctica
             <ArrowRight size={18} className="ml-2" />
           </motion.button>
         </div>

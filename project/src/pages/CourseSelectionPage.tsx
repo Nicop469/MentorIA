@@ -47,9 +47,9 @@ const CourseSelectionPage: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Select a Course</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Selecciona un curso</h1>
           <p className="text-gray-600 mb-8">
-            Choose a subject to begin your personalized learning journey
+            Elige una materia para comenzar tu camino de aprendizaje personalizado
           </p>
         </motion.div>
         
@@ -66,7 +66,7 @@ const CourseSelectionPage: React.FC = () => {
                 }`}
               >
                 <BookOpen size={18} className="mr-2" />
-                Standard Courses
+                Cursos generales
               </button>
               <button
                 onClick={() => setActiveTab('structured')}
@@ -77,7 +77,7 @@ const CourseSelectionPage: React.FC = () => {
                 }`}
               >
                 <GraduationCap size={18} className="mr-2" />
-                Structured Courses
+                Cursos estructurados
                 {courseFrameworks.length > 0 && (
                   <span className="ml-2 bg-primary-100 text-primary-600 text-xs px-2 py-1 rounded-full">
                     {courseFrameworks.length}
@@ -91,10 +91,10 @@ const CourseSelectionPage: React.FC = () => {
             {activeTab === 'standard' && (
               <>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                  General Math Courses
+                  Cursos de matem\u00e1ticas generales
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  These courses use our general question bank and adaptive learning system.
+                  Estos cursos utilizan nuestro banco de preguntas general y el sistema de aprendizaje adaptativo.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -112,20 +112,20 @@ const CourseSelectionPage: React.FC = () => {
             {activeTab === 'structured' && (
               <>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                  Teacher-Designed Courses
+                  Cursos dise\u00f1ados por docentes
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  These courses follow specific syllabi created by teachers with structured chapters and concepts.
+                  Estos cursos siguen s\u00edlabos espec\u00edficos creados por profesores con cap\u00edtulos estructurados y conceptos.
                 </p>
                 
                 {courseFrameworks.length === 0 ? (
                   <div className="text-center py-12">
                     <GraduationCap size={48} className="mx-auto text-gray-400 mb-4" />
                     <p className="text-gray-500 mb-4">
-                      No structured courses available yet.
+                      A\u00fan no hay cursos estructurados disponibles.
                     </p>
                     <p className="text-sm text-gray-400">
-                      Teachers can create structured courses through the Teacher Dashboard.
+                      Los docentes pueden crear cursos estructurados desde el panel de profesor.
                     </p>
                   </div>
                 ) : (
@@ -153,7 +153,7 @@ const CourseSelectionPage: React.FC = () => {
         
         <div className="mt-12">
           <p className="text-sm text-gray-500 text-center">
-            Don't see your subject? Teachers can add more courses through the dashboard.
+            \u00bfNo ves tu materia? Los docentes pueden a\u00f1adir m\u00e1s cursos desde el panel.
           </p>
         </div>
       </div>
