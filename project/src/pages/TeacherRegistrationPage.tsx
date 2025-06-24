@@ -3,13 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useUser } from '../context/UserContext';
 import { BookOpen, Plus, Trash2, Edit3 } from 'lucide-react';
-
-interface Chapter {
-  id: string;
-  number: number;
-  title: string;
-  concepts: string[];
-}
+import { Chapter } from '../types';
 
 interface CourseFramework {
   id: string;

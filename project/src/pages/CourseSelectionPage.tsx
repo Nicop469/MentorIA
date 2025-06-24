@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Course } from '../types';
+import { Course, Chapter } from '../types';
 import CourseCard from '../components/CourseCard';
 import Navigation from '../components/Navigation';
 import { getCourses } from '../services/storageService';
@@ -11,12 +11,7 @@ interface CourseFramework {
   id: string;
   name: string;
   description: string;
-  chapters: Array<{
-    id: string;
-    number: number;
-    title: string;
-    concepts: string[];
-  }>;
+  chapters: Chapter[];
   teacherId: string;
 }
 

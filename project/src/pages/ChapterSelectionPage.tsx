@@ -3,13 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
 import { BookOpen, Target } from 'lucide-react';
-
-interface Chapter {
-  id: string;
-  number: number;
-  title: string;
-  concepts: string[];
-}
+import { Chapter } from '../types';
 
 interface CourseFramework {
   id: string;
