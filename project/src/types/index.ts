@@ -3,6 +3,17 @@ export interface Course {
   name: string;
   description: string;
   classes?: CourseClass[];
+  /**
+   * Optional structured chapters for teacher-designed courses.
+   */
+  chapters?: Chapter[];
+}
+
+export interface Chapter {
+  id: string;
+  number: number;
+  title: string;
+  concepts: string[];
 }
 
 export interface CourseClass {
