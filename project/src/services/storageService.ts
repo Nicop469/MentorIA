@@ -56,6 +56,9 @@ export const deleteCourse = (courseId: string): void => {
   let courses = getCourses();
   courses = courses.filter(c => c.id !== courseId);
   localStorage.setItem(STORAGE_KEYS.COURSES, JSON.stringify(courses));
+  let questions = getQuestions();
+  questions = questions.filter(q => q.courseId !== courseId);
+  localStorage.setItem(STORAGE_KEYS.QUESTIONS, JSON.stringify(questions));
 };
 
 // Questions
