@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface QuestionTimerProps {
   targetTime: number;
@@ -8,27 +8,31 @@ interface QuestionTimerProps {
 
 const QuestionTimer: React.FC<QuestionTimerProps> = ({ targetTime, onTimeUp, isActive }) => {
   const [timeLeft, setTimeLeft] = useState<number>(targetTime);
-  const [startTime, setStartTime] = useState<number | null>(null);
-  
+  const onTimeUpRef = useRef(onTimeUp);
+
+  // Keep latest onTimeUp callback
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  }, [onTimeUp]);
+
   useEffect(() => {
     if (isActive) {
-      setStartTime(Date.now());
       setTimeLeft(targetTime);
-      
+
       const timer = setInterval(() => {
         setTimeLeft(prevTime => {
           if (prevTime <= 1) {
             clearInterval(timer);
-            onTimeUp();
+            onTimeUpRef.current();
             return 0;
           }
           return prevTime - 1;
         });
       }, 1000);
-      
+
       return () => clearInterval(timer);
     }
-  }, [targetTime, onTimeUp, isActive]);
+  }, [targetTime, isActive]);
   
   // Calculate progress percentage
   const progress = Math.max((timeLeft / targetTime) * 100, 0);
