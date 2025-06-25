@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { VARKQuestion, VARKAnswer, VARKStyle } from '../types';
+import { VARKAnswer, VARKStyle } from '../types';
 import { varkQuestions } from '../data/varkQuestions';
 import Navigation from '../components/Navigation';
 import { ClipboardCheck } from 'lucide-react';

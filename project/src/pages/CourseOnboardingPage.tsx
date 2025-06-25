@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Course, CourseClass } from '../types';
+import { Course } from '../types';
 import { getCourses } from '../services/storageService';
 import Navigation from '../components/Navigation';
 import { BookOpen, ChevronDown, ChevronUp } from 'lucide-react';

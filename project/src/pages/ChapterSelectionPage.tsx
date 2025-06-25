@@ -3,15 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
 import { BookOpen, Target } from 'lucide-react';
-import { Chapter } from '../types';
-
-interface CourseFramework {
-  id: string;
-  name: string;
-  description: string;
-  chapters: Chapter[];
-  teacherId: string;
-}
+import { CourseFramework } from '../types/courseFramework';
 
 const ChapterSelectionPage: React.FC = () => {
   const navigate = useNavigate();
