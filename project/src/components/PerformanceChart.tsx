@@ -10,6 +10,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartData
 } from 'chart.js';
 import { Bar, Line } from 'react-chartjs-2';
 
@@ -92,7 +93,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
     },
   };
 
-  const renderChart = (data: any, chartTitle: string) => {
+  const renderChart = (data: ChartData<'line' | 'bar', number[], string>, chartTitle: string) => {
     const chartOptions = {
       ...options,
       plugins: {
@@ -136,7 +137,7 @@ const PerformanceChart: React.FC<PerformanceChartProps> = ({
                 beginAtZero: true,
                 max: 1,
                 ticks: {
-                  callback: function(value: any) {
+                  callback: function(value: number) {
                     return value === 0 ? 'Incorrecta' : value === 1 ? 'Correcta' : '';
                   }
                 }

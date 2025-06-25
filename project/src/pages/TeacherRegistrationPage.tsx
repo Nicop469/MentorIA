@@ -4,14 +4,7 @@ import { motion } from 'framer-motion';
 import { useUser } from '../context/UserContext';
 import { BookOpen, Plus, Trash2, Edit3 } from 'lucide-react';
 import { Chapter } from '../types';
-
-interface CourseFramework {
-  id: string;
-  name: string;
-  description: string;
-  chapters: Chapter[];
-  teacherId: string;
-}
+import { CourseFramework } from '../types/courseFramework';
 
 const TeacherRegistrationPage: React.FC = () => {
   const navigate = useNavigate();
@@ -32,7 +25,6 @@ const TeacherRegistrationPage: React.FC = () => {
   });
   
   const [showCourseForm, setShowCourseForm] = useState(false);
-  const [editingChapter, setEditingChapter] = useState<Chapter | null>(null);
   const [newChapterTitle, setNewChapterTitle] = useState('');
   const [newConcept, setNewConcept] = useState('');
 
