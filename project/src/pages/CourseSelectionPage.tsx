@@ -40,6 +40,16 @@ const CourseSelectionPage: React.FC = () => {
   const handleSelectFrameworkCourse = (courseId: string) => {
     navigate(`/chapters/${courseId}`);
   };
+
+  const handleAccountingCourse = () => {
+    navigate('/contabilidad');
+  };
+
+  const accountingCourse: Course = {
+    id: 'contabilidad',
+    name: 'Contabilidad',
+    description: 'Conceptos b\u00e1sicos de contabilidad',
+  };
   
   return (
     <div className="min-h-screen bg-gray-50">
@@ -109,6 +119,11 @@ const CourseSelectionPage: React.FC = () => {
                       onSelect={handleSelectStandardCourse}
                     />
                   ))}
+                  <CourseCard
+                    key={accountingCourse.id}
+                    course={accountingCourse}
+                    onSelect={handleAccountingCourse}
+                  />
                 </div>
               </>
             )}
