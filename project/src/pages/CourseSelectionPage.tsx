@@ -30,7 +30,11 @@ const CourseSelectionPage: React.FC = () => {
   }, []);
   
   const handleSelectStandardCourse = (courseId: string) => {
-    navigate(`/vark/${courseId}`);
+    if (courseId === 'accounting') {
+      navigate('/accounting');
+    } else {
+      navigate(`/vark/${courseId}`);
+    }
   };
   
   const handleSelectFrameworkCourse = (courseId: string) => {

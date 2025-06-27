@@ -31,6 +31,11 @@ export const initialCourses: Course[] = [
     name: 'Estad\u00edstica',
     description: 'An\u00e1lisis e interpretaci\u00f3n de datos',
   },
+  {
+    id: 'accounting',
+    name: 'Contabilidad',
+    description: 'Curso de contabilidad b\u00e1sica',
+  },
 ];
 
 export const initialQuestions: Question[] = [

@@ -16,6 +16,7 @@ import TeacherDashboardPage from './pages/TeacherDashboardPage';
 import CourseOnboardingPage from './pages/CourseOnboardingPage';
 import TeacherRegistrationPage from './pages/TeacherRegistrationPage';
 import ChapterSelectionPage from './pages/ChapterSelectionPage';
+import AccountingCourse from './pages/AccountingCourse';
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/courses" element={<CourseSelectionPage />} />
           <Route path="/vark/:courseId" element={<VARKQuestionnairePage />} />
+          <Route path="/accounting" element={<AccountingCourse />} />
           <Route path="/diagnostic/:courseId" element={<DiagnosticPage />} />
           <Route path="/results/:courseId" element={<ResultsPage />} />
           <Route path="/onboarding/:courseId" element={<CourseOnboardingPage />} />
