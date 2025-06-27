@@ -16,6 +16,7 @@ import TeacherDashboardPage from './pages/TeacherDashboardPage';
 import CourseOnboardingPage from './pages/CourseOnboardingPage';
 import TeacherRegistrationPage from './pages/TeacherRegistrationPage';
 import ChapterSelectionPage from './pages/ChapterSelectionPage';
+import AccountingCourse from './pages/AccountingCourse';
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/onboarding/:courseId" element={<CourseOnboardingPage />} />
           <Route path="/chapters/:courseId" element={<ChapterSelectionPage />} />
           <Route path="/practice/:courseId" element={<PracticeModePage />} />
+          <Route path="/accounting" element={<AccountingCourse />} />
           <Route path="/summary/:sessionId" element={<SessionSummaryPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/teacher" element={<TeacherDashboardPage />} />
